@@ -1,0 +1,120 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  box-sizing: border-box;
+
+}
+
+.login-page {
+  width: 100%;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  
+}
+.form-group2 input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  
+}
+ </style>
+  <title>Sign Up</title>
+</head>
+<body style="background-image:url(https://www.bleepstatic.com/content/hl-images/2023/10/08/ai-microphone.jpg)">
+
+  <div class="container">
+    <div class="login-page">
+      <div class="form-header">
+    
+        <h2>Sign Up</h2>
+      </div>
+      <form class="login-form" method="post"  action="{% url 'register' %}">
+         {% csrf_token %}
+        <div class="form-group2">
+          <label for="name">Username</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password1" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="password2" required>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="form-footer">
+        <p>Already have an account? <a href="\login">Sign in now</a>.</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

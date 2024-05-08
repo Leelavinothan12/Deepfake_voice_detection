@@ -1,0 +1,90 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deepfake detector</title>
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="http://127.0.0.1:8000/home">Deepfake Voice Detector </a></div>
+    
+  
+    <div class="heading">
+      <ul>
+        <li action="home"><a href="http://127.0.0.1:8000/home" class="under">HOME</a></li>
+        <li action="contact"><a href="http://127.0.0.1:8000/contact" class="under">CONTACT US</a></li>
+        <li action="about"><a href="http://127.0.0.1:8000/about" class="under">ABOUT US</a></li>
+        <li action="about"><a href="{% url 'login'%}" class="under">LOGOUT</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <section>
+    <div class="section">
+      <div class="title"><h1> Contact Us</h1>
+      <p> We understand that you may have questions or need assistance, and <br>we're here to help. Please feel free to reach out.</p></div>
+</div>
+
+  </section>
+  <div class="section3">
+    <p>Undoubtedly, you may harbor inquiries, apprehensions, or perhaps recommendations regarding our digital platform or the myriad services we provide.<br> Rest assured, our team wholeheartedly encourages you to reach out to us via our designated email address: <a href="#">leelavinothan900@gmail.com</a>
+
+        Astoundingly, our diligent staff endeavors to address your concerns or queries with alacrity.<br> Indeed, we aim to deliver a comprehensive response within a timeframe of 24-48 hours. In this way, we maintain a robust, open line of communication with our valued users, fostering an environment that promotes mutual understanding and growth.
+        
+        Consequently, should any conundrums or proposals arise, do not hesitate to contact us.<br> Our unwavering commitment to your satisfaction is a testament to the importance we place on our user community.</p>
+  </div>
+  
+        <footer>
+    <div class="footer0">
+      <h1>Deepfake</h1>
+    </div>
+    <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Terms</div>
+        <div class="heading">Support</div>
+      </div>
+      <div class="services">
+        <div class="heading">Get Help</div>
+        <div class="heading">Help Center</div>
+        
+      </div>
+      <div class="Company">
+        <div class="heading">about us</div>
+        <div class="heading">contact</div>
+        
+      </div>
+      <div class="Get Help">
+        <div class="heading">Others</div>
+        <div class="heading">Complaint</div>
+       
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./ecommerce.js"></script>
+
+</body>
+
+</html>

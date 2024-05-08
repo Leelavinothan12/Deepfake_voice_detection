@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  box-sizing: border-box;
+
+}
+
+.login-page {
+  width: 100%;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  
+}
+    </style>
+</head>
+<body style="background-image:url(https://www.bleepstatic.com/content/hl-images/2023/10/08/ai-microphone.jpg)">
+	<div class="container" >
+        <div class="login-page">
+			<div class="login-form">
+				<div class="form-header">
+			
+					<h2>Sign In</h2>
+				</div>
+				<form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" id="name" name="username" required>
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" id="password" name="password" required>
+					</div>
+					<div class="form-group">
+						
+					</div>
+					<button type="submit">Sign In</button>
+				</form>
+					<p>New to deepfake? <a href="\">Sign up now</a>.</p>
+					
+	
+		</div>
+	</div>
+	<script>
+        const form = document.querySelector('.loginForm');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+
+    if (validateFields(username) && validateFields(password)) {
+        // submit the form here
+    }
+});
+
+function validateFields(field) {
+    // remove any whitespace and check to see if the field is blank, if so return false
+    if (field.value.trim() === "") {
+        // set the status based on the field, the field label, and if it is an error message
+ 
+    } else {
+        // if the field is not blank, check to see if it meets the requirements
+        if (field.id === "username" && field.value.length < 5) {
+            setStatus(
+                field,
+                "Username must be at least 5 characters",
+                "error"
+            );
+            return false;
+        }
+
+        if (field.id === "password" && field.value.length < 8) {
+            setStatus(
+                field,
+                "Password must be at least 8 characters",
+                "error"
+            );
+            return false;
+        }
+
+        // if everything validates, set the status to success
+        setStatus(field, "", "success");
+        return true;
+    }
+}
+
+function setStatus(field, message, status) {
+    // create variable to hold message
+    const errorMessage = field.parentElement.querySelector(".error-message");
+
+    // if success, remove messages and error classes
+    if (status == "success") {
+        if (errorMessage) {
+            errorMessage.innerText = "";
+        }
+        field.classList.remove("input-error");
+    }
+    // if error, add messages and add error classes
+    if (status == "error") {
+        errorMessage.innerText = message;
+        field.classList.add("input-error");
+    }
+}
+
+validation
+    </script>
+</body>
+</html>

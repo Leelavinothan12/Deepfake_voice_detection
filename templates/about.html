@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deepfake detector</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="http://127.0.0.1:8000/home">Deepfake Voice Detector </a></div>
+    
+  
+    <div class="heading">
+      <ul>
+        <li action="home"><a href="http://127.0.0.1:8000/home" class="under">HOME</a></li>
+        <li action="contact"><a href="http://127.0.0.1:8000/contact" class="under">CONTACT US</a></li>
+        <li action="about"><a href="http://127.0.0.1:8000/about" class="under">ABOUT US</a></li>
+        <li action="about"><a href="{% url 'login'%}" class="under">LOGOUT</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+  <section>
+    <div class="section">
+      <div class="title"><h1> About Us</h1>
+      <p> where cutting-edge technology meets the forefront of voice authenticity. We are passionate pioneers in the field of deepfake voice detection,<br> committed to safeguarding the integrity of audio communication in an era where manipulation and deception have reached unprecedented heights.</p></div>
+</div>
+
+  </section>
+  <div class="section3">
+    <h3>Our Mission</h3>
+    <p>our mission is clear: to empower individuals, businesses, and organizations with the tools they need to distinguish between genuine and manipulated voices.<br> In an age where voice is an increasingly critical aspect of communication, we are dedicated to providing robust solutions that ensure trust, security, and transparency.</p>
+<h3>The Challenge</h3>
+<p>As technology advances, so do the methods employed by those seeking to exploit it for malicious purposes. Deepfake voices have emerged as a formidable threat, capable of mimicking real voices with alarming accuracy. This poses a significant risk to personal, corporate, and societal <br> Our team recognized this challenge and set out to create a solution that would effectively detect and mitigate the impact of manipulated voices.</p>  
+</div>
+  
+<footer>
+  <div class="footer0">
+    <h1>Deepfake</h1>
+  </div>
+  <div class="footer1 ">
+    Connect with us at<div class="social-media">
+      <a href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <div class="footer2">
+    <div class="product">
+      <div class="heading">Terms</div>
+      <div class="heading">Support</div>
+    </div>
+    <div class="services">
+      <div class="heading">Get Help</div>
+      <div class="heading">Help Center</div>
+      
+    </div>
+    <div class="Company">
+      <div class="heading">about us</div>
+      <div class="heading">contact</div>
+      
+    </div>
+    <div class="Get Help">
+      <div class="heading">Others</div>
+      <div class="heading">Complaint</div>
+     
+    </div>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./ecommerce.js"></script>
+
+</body>
+
+</html>
